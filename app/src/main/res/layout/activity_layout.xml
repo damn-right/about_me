@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/text_view_style"
+    android:paddingStart="16dp"
+    android:paddingTop="@dimen/text_view_style"
+    android:paddingEnd="16dp">
+
+    <LinearLayout
+        android:id="@+id/Image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/text_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_me_title"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/edit_nickname"
+            style="@style/text_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/nickname_hint"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/done_button"
+            style="@style/text_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40D625"
+            android:text="@string/Done_button" />
+
+        <TextView
+            android:id="@+id/nick_name_text"
+            style="@style/text_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="400dp"
+            android:layout_height="123dp"
+            android:contentDescription="@string/image_desc"
+            android:maxWidth="200dp"
+            android:maxHeight="100dp"
+            android:minWidth="200dp"
+            android:minHeight="100dp"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ScrollView
+            android:id="@+id/bio_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/bio_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/bio_text" />
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
